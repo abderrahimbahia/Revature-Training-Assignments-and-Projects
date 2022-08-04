@@ -1,20 +1,26 @@
-import java.math.BigInteger;
+import java.math.BigDecimal;
+import java.util.Date;
 
 public class Employee {
     private String id;
-    private String name;
-    private BigInteger salary;
+    private String fName;
+    private String lName;
+    private String position;
+    private BigDecimal salary;
 
-    public Employee()
-    {
+    public Employee() {
         this.id = null;
-        this.name = null;
-        this.salary = BigInteger.valueOf(0);
+        this.fName = null;
+        this.lName = null;
+        this.position = null;
+        this.salary = new BigDecimal(0);
     }
 
-    public Employee(String id, String name, BigInteger salary) {
+    public Employee(String id, String fName, String lName, String position, BigDecimal salary) {
         this.id = id;
-        this.name = name;
+        this.fName = fName;
+        this.lName = lName;
+        this.position = position;
         this.salary = salary;
     }
 
@@ -26,27 +32,46 @@ public class Employee {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getfName() {
+        return fName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setfName(String fName) {
+        this.fName = fName;
     }
 
-    public BigInteger getSalary() {
+    public String getlName() {
+        return lName;
+    }
+
+    public void setlName(String lName) {
+        this.lName = lName;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public BigDecimal getSalary() {
         return salary;
     }
 
-    public void setSalary(BigInteger salary) {
+    public void setSalary(BigDecimal salary) {
         this.salary = salary;
     }
 
-    @Override
+
     public String toString()
     {
-        return  "Employee ID:" +this.id+
-                "Employee Name: " + this.name+
-                "Employee Salary: $" + this.salary;
+        return  "\nEmployee ID:" +this.id+
+                "\nEmployee First Name: " + this.fName+
+                "\nEmployee Last Name: " + this.lName+
+                "\nEmployee First Name: " + this.fName+
+                "\nEmployee Position: " + this.position+
+                "\nEmployee Salary: $" + this.salary;
     }
 }
