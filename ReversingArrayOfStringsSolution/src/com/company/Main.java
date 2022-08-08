@@ -56,7 +56,7 @@ public class Main {
                 System.out.print(str + " ");
             }
 
-            System.out.println("\nAfter");
+            System.out.println("\nAfter: ");
             for (String str:stringArrayReversed) {
                 System.out.print("");
                 System.out.print(str + " ");
